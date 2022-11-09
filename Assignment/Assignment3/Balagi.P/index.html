@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment3</title>
+    <link ref="stylesheet" href="https://api.au-syd.assistant.watson.cloud.ibm.com/instances/89eb2c9e-eaa6-41df-b08e-d26a4095df07">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        body{
+            background-color:teal;
+        }
+        .main{
+            margin-top: 50px;
+           
+        }
+        h1{
+         background:white;
+         font-size: 50px;
+         text-shadow: 2px 3px 2px yellow;
+         margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SPORTS</h1>
+    <div class=container">
+        <div class="main"><img src="https://balaji0007.s3.jp-tok.cloud-object-storage.appdomain.cloud/badminton.jpg" alt="port" width="800px" height="400px"></div>
+        <div class="main"><img src="https://balaji0007.s3.jp-tok.cloud-object-storage.appdomain.cloud/basket.jpg" alt="port" width="800px" height="400px"></div>
+        <div class="main"><img src="https://balaji0007.s3.jp-tok.cloud-object-storage.appdomain.cloud/cricket.jpg" alt="port" width="800px" height="400px"></div>
+        <div class="main"><img src="https://balaji0007.s3.jp-tok.cloud-object-storage.appdomain.cloud/kabaddi.jpg" alt="port" width="800px" height="400px"></div>
+
+    </div>
+    
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "0d96e3cf-244a-48ac-a031-5734379e0190", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "b5fae9b6-1f7a-465c-abd8-8ead61d3b7fd", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</body>
+
+</html>
