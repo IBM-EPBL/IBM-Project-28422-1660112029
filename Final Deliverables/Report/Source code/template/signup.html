@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+
+      
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <title>Create account</title>
+</head>
+<body>
+    <div class="container"style="margin-top:0;min-height 60px;">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-3"style="margin-top:10px;">Create an Account (it's free)</h4>
+            <hr style="border-color: grey;">
+            {% for message in form.name.errors %}
+            <div>{{message}}</div>
+            {% endfor %}
+            {% for message in form.email.errors %}
+            <div>{{message}}</div>
+            {% endfor %}
+            {% for message in form.password.errors %}
+            <div>{{message}}</div>
+            {% endfor %}
+            
+        </div>
+    </div>
+    <section>
+        
+            
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                   
+                    <form action="/register"method="post"enctype="multipart/form-data">
+                        
+                        {{ form.csrf_token }}
+        
+                        <div class="mb-4">
+                            {{form.name.label}}
+                            {{form.name(class="form-control")}}
+                            
+                        </div>
+                        <div class="mb-4">
+                            {{form.email.label}}
+                            {{form.email(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.password.label}}
+                            {{form.password(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.fullname.label}}
+                            {{form.fullname(class="form-control")}}
+                            
+                        </div>
+                
+                        <div class="mb-4">
+                            {{form.age.label}}
+                            {{form.age(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.gender.label}}
+                            {{form.gender(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.number.label}}
+                            {{form.number(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.experience.label}}
+                            {{form.experience(class="form-control")}}
+                        </div>
+                      
+                        <div class="mb-4">
+                            {{form.jobrole.label}}
+                            {{form.jobrole(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.skill.label}}
+                            {{form.skill(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.location.label}}
+                            {{form.location(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.pdf.label}}
+                            {{form.pdf(class="form-control")}}
+                            
+                        </div>
+                        {{form.submit(class="btn btn-primary")}}
+                    </form>
+                    <p class="my-2"style="background-color:block;"><span>Already user </span><a href="{{url_for('login')}}">Login Now</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+  
+    <!--<script src="js/jquery.min.js"></script>-->
+     <script>
+        $("document").ready(function(){
+            $(".alert").hide(4000);
+                          
+            });
+			
+			
+			
+
+        
+    </script>
+</body>
+</html>
+
+
+{% endblock %}

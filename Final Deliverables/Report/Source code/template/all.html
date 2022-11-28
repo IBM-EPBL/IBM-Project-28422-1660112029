@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <style>
+    
+      body{
+         background-color: rgba(188, 143, 143, 0.781);
+      }
+       #car1{
+        margin: 10px;
+        height: 200px;
+        padding: 10px;
+        
+       }
+       a{
+         text-decoration: none;
+         color: white;
+       }
+       a:hover{
+         color: white;
+       }
+    
+       .ther{
+         height: 180px;
+         width: 850px;
+         float: right;
+         padding:10px;
+         border: 1px solid black;
+         box-shadow: 2px 1px 2px 1px gray;
+         }
+         .ther>#ther1{
+            height: 40px;
+            width: 100%;
+            bottom: 20px;
+           
+         }
+         #sear{
+            padding: 50px;
+            margin-left: 220px;
+            margin-right: 130px;
+         }
+         i{
+            margin: 20px;
+      
+         }
+         h5{
+            color: white;
+         }
+       #com{
+        width: 200px;
+        height: 500px;
+        background-color: aliceblue;
+        display: flex;
+       }
+   
+    </style>
+</head>
+<body>
+
+    <div class="container"></div>
+   {% if suc %}
+   <div class="alert alert-success" role="alert">{{ suc }}</div>
+   {% endif %}
+    <div id="sear"class="align-self-center">
+        <form class="d-flex  ">
+          <input class="form-control me-1 w-1000 " type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+   <!--ghhfhghjg-->
+   {% for re in ult %}
+   {% set i=loop.index %}
+   
+   <div class="col-md-10" id="car1">
+    
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>{{re["name"]}}</h5></a>
+    <p><i  class="bi bi-geo-alt-fill"></i>{{re["location"]}}<i>4-8 years</i><i> {{re["salary"]}}INR</i><br>
+      {{re["description"]}}.</p>
+    <span>Skills : {{re["skill"]}}</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     {% endfor%}
+    <!--ghhfhghjg-->
+    <div class="col-md-10" id="car1">
+     
+     <div class="ther"><a href="care1"style="text-decoration:none;"><h5>Angular Developer for software developer company- Pune/Bangalore</h5></a>
+   <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+   We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+   <span>Skills : angular developer - Remote work</span>
+   <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+</div>
+</div>
+    </div>
+    <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>customer service representative</h5></a>
+    <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>Sales Engineer</h5></a>
+    <p><i class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>Data Entry Operator Computer Operator</h5></a>
+    <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>HR Executive/ Officer</h5></a>
+    <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>IT Recruiter / Team Leader - Recruitments | Staffing</h5></a>
+    <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>Education Counsellor Student Advisor</h5></a>
+    <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>java developer</h5></a>
+    <p><i class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>python developer</h5></a>
+    <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>senior java developer</h5></a>
+    <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>Angular Developer for software developer company- Pune/Bangalore</h5></a>
+    <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+     <div class="col-md-10" id="car1">
+     
+      <div class="ther"><a href="care1"style="text-decoration:none;"><h5>Software Engineer</h5></a>
+    <p><i  class="bi bi-geo-alt-fill">Bengaluru / Bangalore , Pune</i><i>4-8 years</i><i> 1200000 - 1900000 INR</i><br>
+    We are currently looking for Angular Developers with 4 to 7 years experience.</p>
+    <span>Skills : angular developer - Remote work</span>
+    <div id="ther1"><div class="d-flex justify-content-end"><button class="btn btn-primary" type="submit" ><a href="{{url_for('register')}}">Apply</a></button></div>
+ </div>
+ </div>
+     </div>
+   
+  
+
+   
+   </div>
+
+</body>
+</html>
+{% endblock %}
