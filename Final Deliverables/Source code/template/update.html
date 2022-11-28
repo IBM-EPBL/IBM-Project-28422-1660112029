@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+
+      
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <title>Update Job</title>
+</head>
+<body>
+    <div class="container"style="margin-top:0;min-height 60px;">
+        
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-3"style="margin-top:10px;">Update Job</h4>
+            <hr style="border-color: grey;">
+            
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <form action="http://localhost:5000/update"method="post">
+                        {{ form.csrf_token }}
+                  
+                
+                        <div class="mb-4">
+                            {{form.name.label}}
+                            {{form.name(class="form-control")}}
+                            
+                        </div>
+                        <div class="mb-4">
+                            {{form.description.label}}
+                            {{form.description(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.skill.label}}
+                            {{form.skill(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.salary.label}}
+                            {{form.salary(class="form-control")}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.location.label}}
+                            {{form.location(class="form-control")}}
+                        </div>
+                        {{form.submit(class="btn btn-primary")}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+  
+    <!--<script src="js/jquery.min.js"></script>-->
+     <script>
+        $("document").ready(function(){
+            $(".alert").hide(4000);
+                          
+            });
+			
+			
+			
+
+        
+    </script>
+</body>
+</html>
+
+
+{% endblock %}

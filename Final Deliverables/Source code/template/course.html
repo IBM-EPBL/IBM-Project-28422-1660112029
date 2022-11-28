@@ -1,0 +1,81 @@
+{% extends 'profile.html' %}
+{% block dashboard %}
+
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <style>
+        body{
+            background-color: rosybrown;
+        }
+       #car1{
+        margin: 10px;
+        height: 200px;
+        padding: 10px;
+        display: flex;
+       }
+       .img1{
+         height: 180px;
+         width: 300px;
+         background-color: white;
+         background-image: url("../static/image/fr.png");
+         background-size: cover;
+       }
+       .img2{
+         height: 180px;
+         width: 300px;
+         background-color: white;
+         background-image: url("../static/image/bk.jpg");
+         background-size: cover;
+       }
+       .img3{
+         height: 180px;
+         width: 300px;
+         background-image: url("../static/image/hr.jpg");
+         background-size: cover;
+       }
+       .ther{
+         height: 180px;
+         width: 850px;
+         float: right;
+         padding: 20px;
+         background-color: rgb(255, 0, 98);
+         }
+    </style>
+</head>
+<body>
+   <h2><u>Courses</u></h2> 
+   <div class="container">
+    <div class="col-md-10" id="car1">
+     <div class="img1"></div>
+     <div class="ther"><a href="#"style="text-decoration:none;"><h4>Frontend UI/UX Designer</h4></a>
+   <p>Career guidance after 12th Career guidance after 12 that will determine the rest of your life for you is not an easy decision for a...</p>
+</div>
+    </div>
+   
+   <div class="col-md-10" id="car1">
+    <div class="img2"></div>
+    <div class="ther"><a href="#"style="text-decoration:none;"><h4>
+      Backend ,Python,Java
+</h4></a>
+  <p>Bachelor of Pharmacy of b.pharm is a 4-year undergraduate course designed to provide students with a deeper understanding of the pharmacy sector. The pharmacy...</p>
+
+</div>
+</div>
+<div class="col-md-10" id="car1">
+   <div class="img3"></div>
+   <div class="ther"><a href="#"style="text-decoration:none;"><h4>
+Human Resourse</h4></a>
+ <p>Introduction After class 12, everyone wants to be enrolled in the short courses, have guaranteed placements and get a good income. Before taking any particular...</p>
+
+</div>
+</div>
+   
+   </div>
+
+</body>
+</html>
+{% endblock %}
